@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>LED Controller</title>
+        <meta name="viewport" content="width=400px" />
+      
+        <script src="socket.io/socket.io.js"></script>
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <script type="text/javascript" src="client.js"></script>
+  </head>
+  <body>
+	  <div class="container">
+		  <h1>Motor Controller</h1>
+		  <br>
+		  <br>
+	  </div>
+	  <div class="container"></div>
+		<div class = "row"></div>
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<button type="button" class="btn btn-primary" id= "led" onclick="forwardButton();">&uarr;</button>
+				<button type="button" class="btn btn-primary" id= "led" onclick="reverseButton();">&darr;</button>
+				<button type="button" class="btn btn-primary" id= "led" onclick="RightButton();">&rarr;</button>
+				<button type="button" class="btn btn-primary" id= "led" onclick="LeftButton();">&#8592</button>
+				<button type="button" class="btn btn-primary" id= "led" onclick="stop();">Stop!</button>
+				<br>
+				<br>
+				<input type="range" id="inputSlider" min="60" max="255" value="60" step="5" oninput="sendSpeed(this.value);" />
+					<span id="speed">Speed</span>
+					<span id="status">60</span>
+			
+			</div>
+			<div class="col-sm-4"></div>
+        </div>
+     </div>
+  </body>
+</html>

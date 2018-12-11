@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>CSS + Canvas Game System</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:600italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  
+
+  <script src="socket.io/socket.io.js"></script>
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+       <script src="js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" src="client.js"></script>
+        
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+<div  class ="container" > 
+<body>
+	
+  <div class="system" >
+  <div class="screen-border">
+    <canvas id="easel" class="screen" width="640" height="560"></canvas>
+  </div>
+  <div class="controls">
+    <h1 class="system-name">Motor Controller</h1>
+    
+    <div class="d-pad">
+      <div  id="d-up" class="button d up" onclick="forwardButton();" >
+			<span class="label">  &#9650;</span></div>
+      <div  id="d-right" class="button d right"  onclick="RightButton();">
+			<span class="label" >&#9654;</span></div>
+      <div   id="d-down" class="button d down" onclick="reverseButton();">
+			<span class="label" >&#9660;</span></div>
+      <div   ="d-left" class="button d left"    onclick="LeftButton();">
+			<span class="label" >&#9664;</span></div>
+    </div>
+    
+    <div class="control-buttons">
+      <div  id="control-b" class="button control b"    onclick="stop();" ><span class="label" >Stop</span></div>
+      </div>
+      <div class="control-sliders">
+		 <input type="range" id="inputSlider" min="60" max="255" value="60" step="5" oninput="sendSpeed(this.value);" color: #474881; />
+		 <div class="container">
+		 <span id="speed">Speed</span>
+		<span id="status">60</span>
+		</div>
+    </div>
+		
+    <div class="meta-buttons">
+      <div id="meta-start" class="button meta start"><span class="label">Start</span></div>
+      <div id="meta-select" class="button meta select"><span class="label">Select</span></div>
+    </div>
+  </div>
+
+
+
+</body>
+	</div>
+</html>
